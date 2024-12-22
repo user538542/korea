@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Add" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "reviews" %}</h2>
+<form method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+    <div>
+	{% for field in form %}
+		<div>
+			<strong>{{field.label_tag}}</strong>
+			<div>{{field}}</div>
+		</div>
+	{% endfor %}
+	</div>
+	<div class="div-button-left">
+		<button type="submit" class="btn btn-outline-success" style="width:120px">{% trans "Save" %}</button>	
+		<button onclick="location.href='{% url 'index' %}'" class="btn btn-outline-info" style="width:120px">{% trans "Back" %}</button>	
+	</div>
+</form>
+<script type="text/javascript">
+	$(".chosen").chosen();
+</script>
+{% endblock content %}

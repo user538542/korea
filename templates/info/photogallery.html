@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "photogallery" %}{% endblock title %}
+{% block header %}
+ <style>
+        .thumb img {
+            -webkit-filter: grayscale(0);
+            filter: none;
+            border-radius: 5px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 5px;
+        }
+
+        .thumb img:hover {
+            -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+        }
+
+        .thumb {
+            padding: 5px;
+        }
+</style>
+{% endblock header %}
+{% block content %}
+<div class="div-width-100-text-center">
+	<h3>{% trans "photogallery" %}</h3>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="{% static 'images/photogallery01.jpg' %}">
+                <img class="img-fluid" src="{% static 'images/photogallery01-min.jpg' %}" alt="photogallery">
+            </a>
+        </div>
+		<div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="{% static 'images/photogallery02.jpg' %}">
+                <img class="img-fluid" src="{% static 'images/photogallery02-min.jpg' %}" alt="photogallery">
+            </a>
+        </div>
+		<div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="{% static 'images/photogallery03.jpg' %}">
+                <img class="img-fluid" src="{% static 'images/photogallery03-min.jpg' %}" alt="photogallery">
+            </a>
+        </div>
+		<div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="{% static 'images/photogallery04.jpg' %}">
+                <img class="img-fluid" src="{% static 'images/photogallery04-min.jpg' %}" alt="photogallery">
+            </a>
+        </div>
+		<div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="{% static 'images/photogallery05.jpg' %}">
+                <img class="img-fluid" src="{% static 'images/photogallery05-min.jpg' %}" alt="photogallery">
+            </a>
+        </div>
+		<div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="{% static 'images/photogallery06.jpg' %}">
+                <img class="img-fluid" src="{% static 'images/photogallery06-min.jpg' %}" alt="photogallery">
+            </a>
+        </div>
+		<div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="{% static 'images/photogallery07.jpg' %}">
+                <img class="img-fluid" src="{% static 'images/photogallery07-min.jpg' %}" alt="photogallery">
+            </a>
+        </div>
+		<div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="{% static 'images/photogallery08.jpg' %}">
+                <img class="img-fluid" src="{% static 'images/photogallery08-min.jpg' %}" alt="photogallery">
+            </a>
+        </div>
+		<div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="{% static 'images/photogallery09.jpg' %}">
+                <img class="img-fluid" src="{% static 'images/photogallery09-min.jpg' %}" alt="photogallery">
+            </a>
+        </div>
+		<div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="{% static 'images/photogallery10.jpg' %}">
+                <img class="img-fluid" src="{% static 'images/photogallery10-min.jpg' %}" alt="photogallery">
+            </a>
+        </div>
+		<div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="{% static 'images/photogallery11.jpg' %}">
+                <img class="img-fluid" src="{% static 'images/photogallery11-min.jpg' %}" alt="photogallery">
+            </a>
+        </div>
+		<div class="col-lg-3 col-md-4 col-6 thumb">
+            <a data-fancybox="gallery" href="{% static 'images/photogallery12.jpg' %}">
+                <img class="img-fluid" src="{% static 'images/photogallery12-min.jpg' %}" alt="photogallery">
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "App name" %}{% endblock title %}
+{% block header %}
+
+{% endblock header %}
+{% block content %}
+<div class="jumbotron">
+	<div class="row justify-content-center">
+		<div class="div-width-100-text-center">
+			<h1>Ассоциация корейцев Казахстана</h1>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-md-6">
+				<p>В Казахстане проживают представители более 130 этносов. И каждый, храня свои обычаи и традиции, вносит свой вклад в развитие нашей страны. Вот уже более 75 лет корейцы проживают в Казахстане. Они не просто нашли здесь пристанище, а обрели Родину, пустили корни. Всего в республике корейцев более 100 тысяч человек и имеют репутацию трудолюбивой и уважаемой национальной диаспоры нашей страны. Корейцы обогатили свой уклад и вносят достойный вклад в социально-экономическом и духовном развитии республики.</p>
+				<p>Ассоциация корейцев Казахстана организовалась ровно 25 лет назад, где они могли сплоченно учить традицию, культуру, обучать своих детей родному языку.</p>
+			</div>
+			<div class="col-md-6">
+				<img src="{% static 'images/index.jpg' %}" alt="index" style="width:100%; padding: 10px;">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="jumbotron">
+	<div class="div-width-100-text-center">
+		<h3>{% trans "newss" %}</h3>
+	</div>
+	<hr class="my-4">
+	<div class="row">
+		{% if news1.count > 0 %}
+		<div class="col-lg-8 border" style="padding:10px;">
+			{% for c in news1 %}
+				<center><p><strong>{{ c.daten | date:"d.m.Y H:i" }}</strong></p></center>
+				{% if c.photo.url != None %}
+					<img class="img-center" src="{{ c.photo.url}}" alt="{{ c.news_title }}" title="{{ c.details }}">
+				{% endif %}
+				<h4><a href="{% url 'news_read' c.id %}">{{ c.news_title }}</a></h4>
+				<p>{{ c.details  | linebreaks }}</p>
+			{% endfor %}
+		</div>
+		<div class="col-lg-4 border" style="padding:10px;">
+			{% if news24.count > 0 %}
+				{% for c in news24 %}
+				<center><p><strong>{{ c.daten | date:"d.m.Y H:i" }}</strong></p></center>
+				<div class="row">
+					{% if n.photo.url != None %}
+						<img class="img-center3" src="{{ c.photo.url}}" alt="{{ c.news_title }}" title="{{ c.details }}">
+					{% endif %}
+				</div>
+				<div class="row">
+					<h5><a href="{% url 'news_read' c.id %}">{{ c.news_title }}</a></h5>
+				</div>
+				<hr class="my-4">
+				{% endfor %}
+			{% endif %}
+		</div>
+		{% endif %}
+	</div>
+	<h3 style="text-align: center;" ><a href="{% url 'news_list' %}">{% trans "all newss" %}</a></h3>
+</div>
+<!-- Отзывы -->
+<hr>
+<div class="benefits" >
+	<div class="div-width-100-text-center">
+		<h3>Отзывы</h3>
+	</div>
+	<div class="row">
+		{% if reviews.count > 0 %}
+			{% for r in reviews %}
+				<div class="col-lg-3 border">
+					<div class="card">
+						<div class="card-header">
+							<h5 style="text-align: center">{{ r.user.first_name }}</h5>
+							<p><div class="Stars" style="--rating: {{ r.rating }};"></div></p>
+						</div>
+						<div class="card-body">
+							<p><blockquote>{{ r.details | slice:"0:100" }}...</blockquote></p>
+							<center><p><strong>{{ r.dater | date:"d.m.Y H:i" }}</strong></p></center>
+						</div>
+						<!-- <div class="card-footer text-muted"> -->
+						<!-- </div> -->
+					</div>
+				</div>
+			{% endfor %}
+		{% endif %}
+	</div>
+	<h3 style="text-align: center;" ><a href="{% url 'reviews_list' %}">{% trans "all reviews" %}</a></h3>
+</div>
+
+{% endblock content %}

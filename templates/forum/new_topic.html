@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Forum" %}{% endblock title %}
+{% block breadcrumb %}
+	<li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans "Boards" %}</a></li>
+	<li class="breadcrumb-item"><a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a></li>
+	<li class="breadcrumb-item active">{% trans "New topic" %}</li>
+{% endblock breadcrumb %}
+{% block content %}
+<title>{% trans "Start a New Topic" %}</title>
+<form method="post" novalidate>
+	{% csrf_token %}
+	{% include 'includes/form.html' %}
+	<button type="submit" class="btn btn-success">{% trans "Post" %}</button>
+</form>
+{% endblock content %}
+

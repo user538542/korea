@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Forum" %}{% endblock title %}
+{% block content %}
+<div class="div-width-100-text-center">
+	<h3>{% trans "forum" %}</h3>
+</div>
+<table class="table-forum">
+	<thead>
+		<tr>
+			<th>{% trans "Boards" %}</th>
+			<!-- <th>{% trans "Posts" %}</th> -->
+			<!-- <th>{% trans "Topics" %}</th> -->
+			<!-- <th>{% trans "Last Post" %}</th> -->
+		</tr>
+	</thead>
+	<tbody>
+		{% for board in boards %}
+		<tr>
+			<td>
+				<a href="{% url 'board_topics' board.pk %}">{{ board.name }}</a>
+				<small class="text-muted d-block">{{ board.description }}</small>
+			</td>
+			<!-- <td class="align-middle"> -->
+				<!-- {{ board.get_posts_count }} -->
+			<!-- </td> -->
+			<!-- <td class="align-middle"> -->
+				<!-- {{ board.topics.replies }} -->
+			<!-- </td> -->
+			<!-- <td class="align-middle"> -->
+				<!-- {% with post=board.get_last_post %} -->
+				<!-- {% if post %} -->
+				<!-- <small> -->
+					<!-- <a href="{% url 'topic_posts' board.pk post.topic.pk %}"> -->
+					<!-- By {{ post.created_by.username }} at {{ post.created_at }} -->
+					<!-- </a> -->
+				<!-- </small> -->
+				<!-- {% else %} -->
+				<!-- <small class="text-muted"> -->
+					<!-- <em>{% trans "No posts yet." %}</em> -->
+				<!-- </small> -->
+				<!-- {% endif %} -->
+				<!-- {% endwith %} -->
+			<!-- </td> -->
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+{% endblock content %}

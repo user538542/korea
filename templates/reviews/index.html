@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "reviewss" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "reviews" %}</h2>
+	{% load humanize %}
+
+{% if reviews.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "dater" %}</p></th>
+				<th><p>{% trans "user" %}</p></th>
+				<th><p>{% trans "title" %}</p></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in reviews %}
+			<tr>
+				<td>
+					<p>{{ n.dater | date:"d.m.Y H:i"}}</p>
+				</td>
+				<td>
+					<p>{{ n.user }}</p>						
+				</td>
+				<td>
+					<div class="Stars" style='--rating: {{ n.rating | stringformat:".1f" }};'></div>
+					<p>{{ n.details }}</p>						
+				</td>
+				<td>
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'reviews_delete' n.id %}">{% trans "Delete" %}</a>
+				</td>			
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+{% endblock content %}
+

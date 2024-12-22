@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Forum" %}{% endblock title %}
+{% block breadcrumb %}
+	<li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans "Boards" %}</a></li>
+	<li class="breadcrumb-item active">{{ board.name }}</li>
+{% endblock breadcrumb %}
+{% block content %}
+	{% load humanize %}
+	<title>{{ board.name }}</title>
+	<div class="mb-4">
+		<a href="{% url 'new_topic' board.pk %}" class="btn btn-primary">{% trans "New topic" %}</a>
+	</div>
+	<table class="table-forum">
+		<thead class="thead-inverse">
+			<tr>
+				<th>{% trans "Topic" %}</th>
+				<th>{% trans "Starter" %}</th>
+				<th>{% trans "Replies" %}</th>
+				<th>{% trans "Views" %}</th>
+				<th>{% trans "Last Update" %}</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for topic in topics %}
+			{% url 'topic_posts' board.pk topic.pk as topic_url %}
+			<tr>
+				<td>
+					<p class="mb-0">
+						<a href="{{ topic_url }}">{{ topic.subject }}</a>
+					</p>
+					<small class="text-muted">
+						{% trans "Pages" %}:
+						{% for i in topic.get_page_range %}
+						<a href="{{ topic_url }}?page={{ i }}">{{ i }}</a>
+						{% endfor %}
+						{% if topic.has_many_pages %}
+						... <a href="{{ topic_url }}?page={{ topic.get_page_count }}">{% trans "Last Page" %}</a>
+						{% endif %}
+					</small>
+				</td>
+				<td class="align-middle">{{ topic.starter.username }} {{ topic.starter.first_name }} {{ topic.starter.last_name }}</td>
+				<td class="align-middle">{{ topic.replies }}</td>
+				<td class="align-middle">{{ topic.views }}</td>
+				<td class="align-middle">{{ topic.last_updated|naturaltime }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+</table>
+{% endblock content %}

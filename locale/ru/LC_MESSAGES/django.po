@@ -1,0 +1,335 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-21 18:23+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%"
+"100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\assoc\forms.py:58
+msgid "Wrong date and time format"
+msgstr "Неправильный формат даты/времени"
+
+#: .\assoc\models.py:37 .\assoc\tests.py:67 .\templates\board\index.html:15
+msgid "board_name"
+msgstr "Раздел форума"
+
+#: .\assoc\models.py:38 .\assoc\tests.py:68 .\templates\board\index.html:16
+msgid "board_description"
+msgstr "Описание раздела форума"
+
+#: .\assoc\models.py:48 .\assoc\tests.py:76
+msgid "topic_subject"
+msgstr "Тема форума"
+
+#: .\assoc\models.py:49 .\assoc\tests.py:77
+msgid "last_updated"
+msgstr "Дата обновления"
+
+#: .\assoc\models.py:52 .\assoc\tests.py:78
+msgid "views"
+msgstr "Просмотров"
+
+#: .\assoc\models.py:75
+msgid "message"
+msgstr "Сообщение"
+
+#: .\assoc\models.py:77
+msgid "created_at"
+msgstr "Создано"
+
+#: .\assoc\models.py:78
+msgid "updated_at"
+msgstr "Изменено"
+
+#: .\assoc\models.py:91 .\templates\news\index.html:13
+msgid "daten"
+msgstr "Дата"
+
+#: .\assoc\models.py:92 .\templates\news\index.html:14
+msgid "news_title"
+msgstr "Заголовок новости"
+
+#: .\assoc\models.py:93
+msgid "news_details"
+msgstr "Детали новости"
+
+#: .\assoc\models.py:94
+msgid "news_photo"
+msgstr "Фотография"
+
+#: .\assoc\models.py:117
+msgid "dater_reviews"
+msgstr "Дата отзыва"
+
+#: .\assoc\models.py:118
+msgid "rating"
+msgstr "Оценка"
+
+#: .\assoc\models.py:119
+msgid "details_reviews"
+msgstr "Детали отзыва"
+
+#: .\templates\base.html:36
+msgid "Home"
+msgstr "Главная"
+
+#: .\templates\base.html:43 .\templates\info\about.html:4
+msgid "about"
+msgstr "О нас..."
+
+#: .\templates\base.html:46 .\templates\contact.html:3
+#: .\templates\contact.html:7
+msgid "contacts"
+msgstr "Контакты"
+
+#: .\templates\base.html:49 .\templates\base.html:73 .\templates\index.html:28
+#: .\templates\news\index.html:3 .\templates\news\index.html:6
+#: .\templates\news\list.html:4 .\templates\news\list.html:8
+msgid "newss"
+msgstr "Новости"
+
+#: .\templates\base.html:52 .\templates\info\photogallery.html:4
+#: .\templates\info\photogallery.html:28
+msgid "photogallery"
+msgstr "Фотогаллерея"
+
+#: .\templates\base.html:55 .\templates\info\branch.html:4
+msgid "branch"
+msgstr "Филиалы"
+
+#: .\templates\base.html:58 .\templates\reviews\create.html:6
+#: .\templates\reviews\index.html:7
+msgid "reviews"
+msgstr "Отзывы"
+
+#: .\templates\base.html:62 .\templates\forum\home.html:6
+msgid "forum"
+msgstr "Форум"
+
+#: .\templates\base.html:70
+msgid "boards"
+msgstr "Разделы форума"
+
+#: .\templates\base.html:71 .\templates\reviews\index.html:4
+#: .\templates\reviews\list.html:4 .\templates\reviews\list.html:8
+msgid "reviewss"
+msgstr "Отзывы"
+
+#: .\templates\base.html:78
+msgid "My account"
+msgstr "Мой аккаунт"
+
+#: .\templates\base.html:79
+msgid "Change password"
+msgstr "Поменять пароль"
+
+#: .\templates\base.html:81
+msgid "Log out"
+msgstr "Выйти из системы"
+
+#: .\templates\base.html:86
+msgid "Log In"
+msgstr "Авторизоваться"
+
+#: .\templates\base.html:87
+msgid "Sign up"
+msgstr "Зарегистрироваться"
+
+#: .\templates\board\create.html:3 .\templates\board\index.html:7
+#: .\templates\news\index.html:7 .\templates\reviews\create.html:3
+#: .\templates\reviews\list.html:13
+msgid "Add"
+msgstr "Добавить"
+
+#: .\templates\board\create.html:5 .\templates\board\edit.html:5
+#: .\templates\board\read.html:5
+msgid "board"
+msgstr "Раздел форума"
+
+#: .\templates\board\create.html:17 .\templates\board\edit.html:17
+#: .\templates\news\create.html:18 .\templates\news\edit.html:18
+#: .\templates\reviews\create.html:18
+msgid "Save"
+msgstr "Сохранить"
+
+#: .\templates\board\create.html:18 .\templates\board\edit.html:18
+#: .\templates\board\read.html:18 .\templates\news\create.html:19
+#: .\templates\news\edit.html:19 .\templates\news\read.html:29
+#: .\templates\reviews\create.html:19
+msgid "Back"
+msgstr "Назад"
+
+#: .\templates\board\edit.html:3 .\templates\board\index.html:26
+#: .\templates\news\edit.html:3 .\templates\news\index.html:29
+msgid "Change"
+msgstr "Изменить"
+
+#: .\templates\board\index.html:3
+msgid "List"
+msgstr "Список"
+
+#: .\templates\board\index.html:6 .\templates\forum\edit_post.html:5
+#: .\templates\forum\home.html:11 .\templates\forum\new_topic.html:5
+#: .\templates\forum\reply_topic.html:5 .\templates\forum\topic_posts.html:5
+#: .\templates\forum\topics.html:5
+msgid "Boards"
+msgstr "Разделы форума"
+
+#: .\templates\board\index.html:27 .\templates\board\read.html:3
+#: .\templates\news\index.html:30 .\templates\news\read.html:4
+msgid "View"
+msgstr "Просмотреть"
+
+#: .\templates\board\index.html:28 .\templates\news\index.html:31
+#: .\templates\reviews\index.html:35
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\templates\forum\edit_post.html:3 .\templates\forum\edit_post.html:8
+msgid "Edit post"
+msgstr "Редактировать сообщение"
+
+#: .\templates\forum\edit_post.html:14
+msgid "Save changes"
+msgstr "Сохранить изменения"
+
+#: .\templates\forum\home.html:3 .\templates\forum\new_topic.html:3
+#: .\templates\forum\reply_topic.html:3 .\templates\forum\topic_posts.html:3
+#: .\templates\forum\topics.html:3
+msgid "Forum"
+msgstr "Форум"
+
+#: .\templates\forum\home.html:12
+msgid "Posts"
+msgstr "Посты"
+
+#: .\templates\forum\home.html:13
+msgid "Topics"
+msgstr "Темы"
+
+#: .\templates\forum\home.html:14
+msgid "Last Post"
+msgstr "Последнее сообщение"
+
+#: .\templates\forum\home.html:40
+msgid "No posts yet."
+msgstr "Сообщений пока нет"
+
+#: .\templates\forum\new_topic.html:7 .\templates\forum\topics.html:12
+msgid "New topic"
+msgstr "Новая тема"
+
+#: .\templates\forum\new_topic.html:10
+msgid "Start a New Topic"
+msgstr "Начать новую тему"
+
+#: .\templates\forum\new_topic.html:14
+msgid "Post"
+msgstr "Опубликовать"
+
+#: .\templates\forum\reply_topic.html:8 .\templates\forum\reply_topic.html:15
+msgid "Post a reply"
+msgstr "Опубликовать ответ"
+
+#: .\templates\forum\topic_posts.html:12
+msgid "Reply"
+msgstr "Ответить"
+
+#: .\templates\forum\topic_posts.html:41
+msgid "Edit"
+msgstr "Изменить"
+
+#: .\templates\forum\topics.html:17
+msgid "Topic"
+msgstr "Тема"
+
+#: .\templates\forum\topics.html:18
+msgid "Starter"
+msgstr "Начать"
+
+#: .\templates\forum\topics.html:19
+msgid "Replies"
+msgstr "Replies"
+
+#: .\templates\forum\topics.html:20
+msgid "Views"
+msgstr "Просмотры"
+
+#: .\templates\forum\topics.html:21
+msgid "Last Update"
+msgstr "Последнее обновление"
+
+#: .\templates\forum\topics.html:33
+msgid "Pages"
+msgstr "Страницы"
+
+#: .\templates\forum\topics.html:38
+msgid "Last Page"
+msgstr "Последняя страница"
+
+#: .\templates\index.html:4
+msgid "App name"
+msgstr "АКК"
+
+#: .\templates\index.html:61
+msgid "all newss"
+msgstr "Все новости"
+
+#: .\templates\index.html:89
+msgid "all reviews"
+msgstr "Все отзывы"
+
+#: .\templates\news\create.html:3
+msgid "Create"
+msgstr "Создать"
+
+#: .\templates\news\create.html:6 .\templates\news\edit.html:6
+#: .\templates\news\read.html:7
+msgid "news"
+msgstr "Новость"
+
+#: .\templates\news\list.html:14
+msgid "Search"
+msgstr "Поиск"
+
+#: .\templates\news\list.html:15
+msgid "Reset"
+msgstr "Сброс"
+
+#: .\templates\registration\logged_out.html:4
+#: .\templates\registration\login.html:4
+#: .\templates\registration\password_change_done.html:3
+#: .\templates\registration\password_change_form.html:3
+#: .\templates\registration\password_reset_complete.html:4
+#: .\templates\registration\password_reset_confirm.html:4
+#: .\templates\registration\password_reset_done.html:4
+#: .\templates\registration\password_reset_form.html:4
+#: .\templates\registration\register_done.html:4
+msgid "App Name"
+msgstr "АКК"
+
+#: .\templates\reviews\index.html:15
+msgid "dater"
+msgstr "Дата"
+
+#: .\templates\reviews\index.html:16
+msgid "user"
+msgstr "Пользователь"
+
+#: .\templates\reviews\index.html:17
+msgid "title"
+msgstr "Заголовок"

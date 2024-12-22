@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "reviewss" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<div class="div-width-100-text-center">
+	<h3>{% trans "reviewss" %}</h3>
+</div>
+{% load humanize %}
+{% if user.is_authenticated %}	
+<div class="row">
+	<p><a href="{% url 'reviews_create'%}">{% trans "Add" %}</a></p>
+</div>
+{% endif %}
+
+{% if reviews.count > 0 %}
+<div class="row">
+	<table id="myTable" style="width:100%">
+		<thead>
+			<tr>
+				<th></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in reviews %}
+			<tr>
+				<td>
+					<div class="card">
+						<div class="card-header">
+							<h5 style="text-align: center">{{ n.user.first_name }}</h5>
+							<p><div class="Stars" style="--rating: {{ n.rating }};"></div></p>
+						</div>
+						<div class="card-body">					
+							<div class="row">
+								<p>{{ n.details }}</p>								
+							</div>
+						</div>
+						<div class="card-footer text-muted">
+							<p><strong>{{ n.dater | date:"d.m.Y H:i" }}</strong><p>
+						</div>
+					</div>
+				</td>	
+			</tr>
+			{% endfor %}	
+		</tbody>
+	</table>	
+</div>
+{% endif %}
+{% endblock content %}
+

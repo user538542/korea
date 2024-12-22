@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "View" %}{% endblock title %}
+{% block content %}
+<h2>{% trans "board" %}</h2>
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">		
+			<h4>{{ board.name }}</h4>			
+		</div>
+		<div class="card-body">
+			<p>{{ board.description }}</p>			
+		</div>
+		<div class="card-footer">				
+		</div>		
+	</div>
+	<div class="div-button-left">	
+		<a class="btn btn-outline-info" style="width:120px; " href="{% url 'board_index' %}">{% trans "Back" %}</a>    	
+	</div>
+</div>
+{% endblock content %}
