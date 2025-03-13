@@ -24,30 +24,62 @@
 	</div>
 </div>
 
-<div class="jumbotron">
+<div>
 	<div class="div-width-100-text-center">
 		<h3>{% trans "newss" %}</h3>
 	</div>
 	<hr class="my-4">
 	<div class="row">
 		{% if news1.count > 0 %}
-		<div class="col-lg-8 border" style="padding:10px;">
+		<div class="col-8">
 			{% for c in news1 %}
 				<center><p><strong>{{ c.daten | date:"d.m.Y H:i" }}</strong></p></center>
-				{% if c.photo.url != None %}
-					<img class="img-center" src="{{ c.photo.url}}" alt="{{ c.news_title }}" title="{{ c.details }}">
+				{% if c.id == 1 %}
+					<img style="img-center3" src="{% static 'images/news1.jpg' %}" alt="{{ c.photo.url }}">
+				{% elif c.id == 2 %}
+					<img style="img-center3" src="{% static 'images/news2.jpg' %}" alt="{{ c.photo.url }}">
+				{% elif c.id == 3 %}
+					<img style="img-center3" src="{% static 'images/news3.jpg' %}" alt="{{ c.photo.url }}">
+				{% elif c.id == 4 %}
+					<img style="img-center3" src="{% static 'images/news4.jpg' %}" alt="{{ c.photo.url }}">
+				{% elif c.id == 5 %}
+					<img style="img-center3" src="{% static 'images/news5.jpg' %}" alt="{{ c.photo.url }}">
+				{% elif c.id == 6 %}
+					<img style="img-center3" src="{% static 'images/news6.jpg' %}" alt="{{ c.photo.url }}">
+				{% elif c.id == 7 %}
+					<img style="img-center3" src="{% static 'images/news7.jpg' %}" alt="{{ c.photo.url }}">
+				{% else %}
+					{% if c.photo.url != None %}
+						<img style="img-center3" src="{{ c.photo.url}}" alt="{{ c.photo.url }}">
+					{% endif %}
 				{% endif %}
 				<h4><a href="{% url 'news_read' c.id %}">{{ c.news_title }}</a></h4>
 				<p>{{ c.details  | linebreaks }}</p>
 			{% endfor %}
 		</div>
-		<div class="col-lg-4 border" style="padding:10px;">
+		<div class="col-4">
 			{% if news24.count > 0 %}
 				{% for c in news24 %}
 				<center><p><strong>{{ c.daten | date:"d.m.Y H:i" }}</strong></p></center>
 				<div class="row">
-					{% if n.photo.url != None %}
-						<img class="img-center3" src="{{ c.photo.url}}" alt="{{ c.news_title }}" title="{{ c.details }}">
+					{% if c.id == 1 %}
+						<img style="img-center3" src="{% static 'images/news1.jpg' %}" alt="{{ c.photo.url }}">
+					{% elif c.id == 2 %}
+						<img style="img-center3" src="{% static 'images/news2.jpg' %}" alt="{{ c.photo.url }}">
+					{% elif c.id == 3 %}
+						<img style="img-center3" src="{% static 'images/news3.jpg' %}" alt="{{ c.photo.url }}">
+					{% elif c.id == 4 %}
+						<img style="img-center3" src="{% static 'images/news4.jpg' %}" alt="{{ c.photo.url }}">
+					{% elif c.id == 5 %}
+						<img style="img-center3" src="{% static 'images/news5.jpg' %}" alt="{{ c.photo.url }}">
+					{% elif c.id == 6 %}
+						<img style="img-center3" src="{% static 'images/news6.jpg' %}" alt="{{ c.photo.url }}">
+					{% elif c.id == 7 %}
+						<img style="img-center3" src="{% static 'images/news7.jpg' %}" alt="{{ c.photo.url }}">
+					{% else %}
+						{% if c.photo.url != None %}
+							<img style="img-center3" src="{{ c.photo.url}}" alt="{{ c.photo.url }}">
+						{% endif %}
 					{% endif %}
 				</div>
 				<div class="row">

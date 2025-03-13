@@ -26,8 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-uq!m+rv@+&+uin(7)=^9t@@srkdf+8trbqpu8_y2qe)m$hlm!1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 DEBUG = False
+#DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'korea-assoc.onrender.com',]
 
@@ -104,15 +104,15 @@ DATABASES = {
     #    'USER' : 'customer',
     #    'PASSWORD' : 'customer',
     #    'HOST' : '127.0.0.1',
-    #    'PORT' : '5432',
+    #    'PORT' : '5433',
     #}
     
     'default': {
 	    'ENGINE': 'django.db.backends.postgresql_psycopg2',
-	    'NAME': 'admin_korea',
-	    'USER' : 'admin_korea_user',
-	    'PASSWORD' : 'p6bRpcEqwXhHYHR1mb8KahiMTWJ4B2QB',
-	    'HOST' : 'dpg-ctjom4i3esus73e47vj0-a.frankfurt-postgres.render.com',
+	    'NAME': 'korea',
+	    'USER' : 'korea_admin',
+	    'PASSWORD' : 'pFGr3BGyWheeuuMiCzFdAgItYZMWW5G0',
+	    'HOST' : 'dpg-cv9hqjogph6c73e8vebg-a.frankfurt-postgres.render.com',
 	    'PORT' : '5432',
     }
 

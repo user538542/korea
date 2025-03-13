@@ -8,25 +8,41 @@
 <div class="row justify-content-center">
 	<div class="card" style="width:100%">
 		<div class="card-header">
-			<h4>{{ news.news_title }}</h4>			
+			<h4>{{ news.news_title }}</h4>
 		</div>
 		<div class="card-body">
 			<div class="row">
-				<div class="col-md-8">				
-					<p>{{ news.details | linebreaks }}</p>					
+				<div class="col-md-8">
+					<p>{{ news.details | linebreaks }}</p>
 				</div>
 				<div class="col-md-4">
-					{% if news.photo.url != None %}
-						<img style="width:100%; max-width:400px;" src="{{ news.photo.url}}" alt="{{ news.photo.url }}">
+					{% if news.id == 1 %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/news1.jpg' %}" alt="{{ news.photo.url }}">
+					{% elif news.id == 2 %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/news2.jpg' %}" alt="{{ news.photo.url }}">
+					{% elif news.id == 3 %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/news3.jpg' %}" alt="{{ news.photo.url }}">
+					{% elif news.id == 4 %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/news4.jpg' %}" alt="{{ news.photo.url }}">
+					{% elif news.id == 5 %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/news5.jpg' %}" alt="{{ news.photo.url }}">
+					{% elif news.id == 6 %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/news6.jpg' %}" alt="{{ news.photo.url }}">
+					{% elif news.id == 7 %}
+						<img style="width:100%; max-width:400px;" src="{% static 'images/news7.jpg' %}" alt="{{ news.photo.url }}">
+					{% else %}
+						{% if news.photo.url != None %}
+							<img style="width:100%; max-width:400px;" src="{{ news.photo.url}}" alt="{{ news.photo.url }}">
+						{% endif %}
 					{% endif %}
 				</div>
-			</div>				
+			</div>
 		</div>
-		<div class="card-footer">				
-			<p>{{ news.daten }}</p>			
-		</div>		
+		<div class="card-footer">
+			<p>{{ news.daten }}</p>
+		</div>
 	</div>
-	<a class="btn btn-outline-info" style="width:120px; margin: 2px;" onclick="history.back()">{% trans "Back" %}</a>    	
+	<a class="btn btn-outline-info" style="width:120px; margin: 2px;" onclick="history.back()">{% trans "Back" %}</a>
 </div>
 
 {% endblock content %}

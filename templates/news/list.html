@@ -10,7 +10,7 @@
 {% if news.count > 0 %}
 	<form method="POST" enctype="multipart/form-data" style="margin-top: 10px; margin-bottom: 10px;">
 		{% csrf_token %}
-		<input type="search" value="{{news_search}}" name="news_search">		
+		<input type="search" value="{{news_search}}" name="news_search">
 		<button class="btn btn-outline-success" name="searchBtn" style="width:120px;">{% trans "Search" %}</button>
 		<button class="btn btn-outline-primary" name="resetBtn" type="submit" onClick="window.location.reload();" style="width:120px;">{% trans "Reset" %}</button>
 	</form>
@@ -21,12 +21,28 @@
 				<div class="card-header">
 					<p>{{ n.daten | date:"d.m.Y H:i" }}<p>
 				</div>
-				<div class="card-body">	
-					<div class="row">			
-						{% if n.photo.url != None %}
-							<img class="img-center2" src="{{ n.photo.url}}" alt="{{ n.photo.url }}">
+				<div class="card-body">
+					<div class="row">
+						{% if n.id == 1 %}
+							<img style="img-center2" src="{% static 'images/news1.jpg' %}" alt="{{ n.photo.url }}">
+						{% elif n.id == 2 %}
+							<img style="img-center2" src="{% static 'images/news2.jpg' %}" alt="{{ n.photo.url }}">
+						{% elif n.id == 3 %}
+							<img style="img-center2" src="{% static 'images/news3.jpg' %}" alt="{{ n.photo.url }}">
+						{% elif n.id == 4 %}
+							<img style="img-center2" src="{% static 'images/news4.jpg' %}" alt="{{ n.photo.url }}">
+						{% elif n.id == 5 %}
+							<img style="img-center2" src="{% static 'images/news5.jpg' %}" alt="{{ n.photo.url }}">
+						{% elif n.id == 6 %}
+							<img style="img-center2" src="{% static 'images/news6.jpg' %}" alt="{{ n.photo.url }}">
+						{% elif n.id == 7 %}
+							<img style="img-center2" src="{% static 'images/news7.jpg' %}" alt="{{ n.photo.url }}">
+						{% else %}
+							{% if n.photo.url != None %}
+								<img style="img-center2" src="{{ n.photo.url}}" alt="{{ n.photo.url }}">
+							{% endif %}
 						{% endif %}
-					</div>					
+					</div>
 					<!-- <div class="row"> -->
 						<!-- <div class="col-md-8"> -->
 							<!-- <p>{{ n.details | linebreaks }}</p> -->
@@ -42,7 +58,7 @@
 					<h5><a href="{% url 'news_read' n.id %}">{{ n.news_title }}</a></h5>
 				</div>
 			</div>
-		{% endfor %}	
+		{% endfor %}
 	</div>
 {% endif %}
 {% endblock content %}
