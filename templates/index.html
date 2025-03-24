@@ -35,22 +35,22 @@
 			{% for c in news1 %}
 				<center><p><strong>{{ c.daten | date:"d.m.Y H:i" }}</strong></p></center>
 				{% if c.id == 1 %}
-					<img style="img-center3" src="{% static 'images/news1.jpg' %}" alt="{{ c.photo.url }}">
+					<img style="width:100%; max-width:600px;" src="{% static 'images/news1.jpg' %}" alt="{{ c.photo.url }}">
 				{% elif c.id == 2 %}
-					<img style="img-center3" src="{% static 'images/news2.jpg' %}" alt="{{ c.photo.url }}">
+					<img style="width:100%; max-width:600px;" src="{% static 'images/news2.jpg' %}" alt="{{ c.photo.url }}">
 				{% elif c.id == 3 %}
-					<img style="img-center3" src="{% static 'images/news3.jpg' %}" alt="{{ c.photo.url }}">
+					<img style="width:100%; max-width:600px;" src="{% static 'images/news3.jpg' %}" alt="{{ c.photo.url }}">
 				{% elif c.id == 4 %}
-					<img style="img-center3" src="{% static 'images/news4.jpg' %}" alt="{{ c.photo.url }}">
+					<img style="width:100%; max-width:600px;" src="{% static 'images/news4.jpg' %}" alt="{{ c.photo.url }}">
 				{% elif c.id == 5 %}
-					<img style="img-center3" src="{% static 'images/news5.jpg' %}" alt="{{ c.photo.url }}">
+					<img style="width:100%; max-width:600px;" src="{% static 'images/news5.jpg' %}" alt="{{ c.photo.url }}">
 				{% elif c.id == 6 %}
-					<img style="img-center3" src="{% static 'images/news6.jpg' %}" alt="{{ c.photo.url }}">
+					<img style="width:100%; max-width:600px;"src="{% static 'images/news6.jpg' %}" alt="{{ c.photo.url }}">
 				{% elif c.id == 7 %}
-					<img style="img-center3" src="{% static 'images/news7.jpg' %}" alt="{{ c.photo.url }}">
+					<img style="width:100%; max-width:600px;" src="{% static 'images/news7.jpg' %}" alt="{{ c.photo.url }}">
 				{% else %}
 					{% if c.photo.url != None %}
-						<img style="img-center3" src="{{ c.photo.url}}" alt="{{ c.photo.url }}">
+						<img "width:100%; max-width:600px;" src="{{ c.photo.url}}" alt="{{ c.photo.url }}">
 					{% endif %}
 				{% endif %}
 				<h4><a href="{% url 'news_read' c.id %}">{{ c.news_title }}</a></h4>
@@ -63,22 +63,22 @@
 				<center><p><strong>{{ c.daten | date:"d.m.Y H:i" }}</strong></p></center>
 				<div class="row">
 					{% if c.id == 1 %}
-						<img style="img-center3" src="{% static 'images/news1.jpg' %}" alt="{{ c.photo.url }}">
+						<img style="width:100%; max-width:400px;" src="{% static 'images/news1.jpg' %}" alt="{{ c.photo.url }}">
 					{% elif c.id == 2 %}
-						<img style="img-center3" src="{% static 'images/news2.jpg' %}" alt="{{ c.photo.url }}">
+						<img style="width:100%; max-width:400px;" src="{% static 'images/news2.jpg' %}" alt="{{ c.photo.url }}">
 					{% elif c.id == 3 %}
-						<img style="img-center3" src="{% static 'images/news3.jpg' %}" alt="{{ c.photo.url }}">
+						<img style="width:100%; max-width:400px;" src="{% static 'images/news3.jpg' %}" alt="{{ c.photo.url }}">
 					{% elif c.id == 4 %}
-						<img style="img-center3" src="{% static 'images/news4.jpg' %}" alt="{{ c.photo.url }}">
+						<img style="width:100%; max-width:400px;" src="{% static 'images/news4.jpg' %}" alt="{{ c.photo.url }}">
 					{% elif c.id == 5 %}
-						<img style="img-center3" src="{% static 'images/news5.jpg' %}" alt="{{ c.photo.url }}">
+						<img style="width:100%; max-width:400px;" src="{% static 'images/news5.jpg' %}" alt="{{ c.photo.url }}">
 					{% elif c.id == 6 %}
-						<img style="img-center3" src="{% static 'images/news6.jpg' %}" alt="{{ c.photo.url }}">
+						<img style="width:100%; max-width:400px;" src="{% static 'images/news6.jpg' %}" alt="{{ c.photo.url }}">
 					{% elif c.id == 7 %}
-						<img style="img-center3" src="{% static 'images/news7.jpg' %}" alt="{{ c.photo.url }}">
+						<img style="width:100%; max-width:400px;" src="{% static 'images/news7.jpg' %}" alt="{{ c.photo.url }}">
 					{% else %}
 						{% if c.photo.url != None %}
-							<img style="img-center3" src="{{ c.photo.url}}" alt="{{ c.photo.url }}">
+							<img class="img-center2" src="{{ c.photo.url}}" alt="{{ c.photo.url }}">
 						{% endif %}
 					{% endif %}
 				</div>
